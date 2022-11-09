@@ -32,10 +32,8 @@ for mass in mass_array:
     plt.subplot(3,3,index)
     bh.plot()
     xx = bh.r1 * np.cos(bh.theta1)
-    yy = bh.r1 * np.sin(bh.theta1)
-    #plt.pcolormesh(bh.r1, bh.theta1, bh.values1, cmap=plt.cm.afmhot, shading="gouraud")
-    plt.pcolormesh(xx, yy, bh.values1, cmap=plt.cm.afmhot, shading="gouraud")
-    #plt.contourf(xx, yy, bh.values1, cmap = plt.cm.afmhot, shading="gouraud")
+    yy = bh.r1 * np.sin(bh.theta1)    
+    plt.pcolormesh(xx, yy, bh.values1, cmap=plt.cm.afmhot, shading="gouraud")    
     plt.title(f'm={mass} and fov={fov}')
     plt.gca().set_aspect("equal", adjustable="box")
     index += 1
